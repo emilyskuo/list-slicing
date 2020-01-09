@@ -156,8 +156,6 @@ def replace_head(input_list):
     input_list[0] = 42
     
     return
-    
-
 
 def replace_third_and_last(input_list):
     """Replace third and last elements of input_list with 37 and return nothing.
@@ -170,6 +168,8 @@ def replace_third_and_last(input_list):
     True
 
     """
+    input_list[2] = 37
+    input_list[-1] = 37
 
     pass
 
