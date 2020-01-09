@@ -205,7 +205,9 @@ def delete_third_and_seventh(input_list):
     True
 
     """
-
+    del input_list[2]
+    del input_list[5]
+    #print(input_list)
     pass
 
 
@@ -222,7 +224,8 @@ def delete_middle(input_list):
     True
 
     """
-
+    del input_list[2:-2]
+    
     pass
 
 
@@ -231,6 +234,9 @@ def delete_middle(input_list):
 #
 # Please ask for a code review from an Education team member before proceeding.
 ##############################################################################
+
+# notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
+# delete_third_and_seventh(notes)
 
 # This is the part were we actually run the doctests.
 
