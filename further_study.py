@@ -175,7 +175,10 @@ def custom_index(input_list, value):
 
     """
 
-    return 0
+    for index in range(len(input_list)):
+        if input_list[index] == value:
+            return index
+
 
 
 def custom_count(input_list, value):
