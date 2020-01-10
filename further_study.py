@@ -216,9 +216,16 @@ def custom_reverse(input_list):
         True
 
     """
+    # input_list[::-1]
+    # print(input_list)
+    new_list = input_list[:]
+    del input_list[:]
+    for index in range(len(new_list)-1, -1, -1):
+        custom_append(input_list, new_list[index])
+    #print(input_list)
 
-    pass
-
+    
+#custom_reverse([0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
 
 def custom_contains(input_list, value):
     """Return True or False if value is in the input_list.
@@ -236,8 +243,11 @@ def custom_contains(input_list, value):
         True
 
     """
+    for element in input_list:
+        if element == value:
+            return True
 
-    return None
+    return False 
 
 
 def custom_equality(some_list, another_list):
