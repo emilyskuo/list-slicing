@@ -106,8 +106,18 @@ def custom_insert(input_list, index, value):
         True
 
     """
+    #input_list[index:custom_len(input_list)-index]
+    # temp_list_after_index = input_list[index:]
+    # = input_list[:index]
+    end_of_input_list = input_list[index:]
+    del input_list[index:]
+    custom_append(input_list, value)
+    custom_extend(input_list, end_of_input_list)
 
-    pass
+    # temp_list = custom_append(input_list[:index], value)
+    # custom_extend(input_list, temp_list)
+    #print(input_list)
+
 
 
 def custom_remove(input_list, value):
