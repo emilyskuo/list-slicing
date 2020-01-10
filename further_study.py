@@ -61,12 +61,13 @@ def custom_append(input_list, value):
         True
 
     """
-    input_list[custom_len(input_list):custom_len(input_list)+1] = [value]
+    input_list[custom_len(input_list):custom_len(input_list)] = [value]
     #print(input_list)
    
     # input_list = input_list + [value]
     # print(input_list)
     # return None
+
 
 #custom_append(['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'], "Re")
 
@@ -118,7 +119,8 @@ def custom_insert(input_list, index, value):
     # custom_extend(input_list, temp_list)
     #print(input_list)
 
-
+    # input_list_len = len(input_list)
+    # input_list[input_list_len:input_list_len] = [value]
 
 def custom_remove(input_list, value):
     """Remove the first item of the value in list.
@@ -265,8 +267,11 @@ def custom_equality(some_list, another_list):
         False
 
     """
+    for index in range(len(some_list)):
+        if some_list[index] != another_list[index]:
+            return False
+    return True
 
-    return None
 
 
 ##############################################################################
