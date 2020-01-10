@@ -136,7 +136,10 @@ def custom_remove(input_list, value):
 
     """
 
-    pass
+    for index in range(len(input_list)):
+        if input_list[index] == value:
+            del input_list[index]
+            break   
 
 
 def custom_pop(input_list):
